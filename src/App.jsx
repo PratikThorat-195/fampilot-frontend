@@ -1,10 +1,11 @@
-import Register from "./pages/Register"
 import Header from "./components/Header"
+import Home from "./pages/home"
+
 function App(){
 return(
     <>
       <Header />
-      <Register></Register>
+      <Home />
     </>
   )
 }
