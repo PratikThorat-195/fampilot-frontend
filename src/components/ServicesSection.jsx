@@ -54,36 +54,36 @@ function ServicesSection() {
     return (
         <section
             id="services"
-            className="bg-[#F3F4FC] px-5 py-20 sm:px-8 lg:px-12 lg:py-24"
+            className="bg-white px-5 py-16 sm:px-8 lg:px-12 lg:py-20"
         >
             <div className="mx-auto max-w-7xl">
 
                 {/* Section Heading */}
-                <div className="mb-14 text-center">
+                <div className="mb-14 flex w-full flex-col items-center text-center">
 
                     <span className="
                         inline-block rounded-full
                         bg-[#E9EAFE] px-4 py-2
                         text-xs font-semibold
-                        tracking-[0.15em] text-[#6654A5]
+                        tracking-[0.15em] text-[#7025C7]
                     ">
                         OUR SERVICES
                     </span>
 
                     <h2 className="
                         mt-5 text-3xl font-bold
-                        tracking-tight text-[#292631]
+                        tracking-tight text-center text-[#292631]
                         sm:text-4xl lg:text-5xl
                     ">
                         Everything Your Family Needs
-                        <span className="block text-[#6654A5]">
+                        <span className="block text-[#7025C7]">
                             Under One Roof.
                         </span>
                     </h2>
 
                     <p className="
                         mx-auto mt-5 max-w-2xl
-                        text-sm leading-7 text-[#85818D]
+                        text-sm text-center leading-7 text-[#85818D]
                         sm:text-base
                     ">
                         From everyday household responsibilities to
@@ -133,7 +133,7 @@ function ServicesSection() {
                                 items-center justify-center
                                 rounded-full
                                 bg-gradient-to-br
-                                from-[#8B6BEA] to-[#6654A5]
+                                from-[#7025C7] to-[#4F0D91]
                                 text-2xl font-semibold text-white
 
                                 shadow-[0_8px_18px_-5px_rgba(102,84,165,0.55)]
@@ -150,7 +150,7 @@ function ServicesSection() {
                                 mt-6 text-lg font-semibold
                                 tracking-tight text-[#292631]
                                 transition-colors duration-300
-                                group-hover:text-[#6654A5]
+                                group-hover:text-[#7025C7]
                             ">
                                 {service.title}
                             </h3>

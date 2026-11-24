@@ -1,124 +1,126 @@
 
-import Register from './Register'
+// import Register from './Register'
 import ServicesSection from '../components/ServicesSection'
-
+import FamPilotDashboard from '../components/FampilotDashboard'
+import HowItWorksSection from '../components/HowItWorksSection';
+import AIAdvisorSection from '../components/AIAdvisorSection';
+import SecuritySection from '../components/SecuritySection';
+import WhyFamPilotSection from '../components/WhyFamPilotSection';
+import FinalCTASection from '../components/FinalCTASection';
+import Footer from '../components/Footer';
 function Home() {
     return (
         <main className="min-h-screen bg-[#F3F4FC]">
 
+            
+
             <section
-                id="home"
-                className="min-h-[calc(100svh-76px)] pt-[76px]"
+                        id="home"
+                        className="bg-white px-6 py-6 lg:px-10"
             >
-                <div className="
-                    mx-auto grid max-w-[1440px]
-                    grid-cols-1 lg:grid-cols-2
-                    items-center
-                    gap-8 lg:gap-12
-                    px-5 sm:px-8 lg:px-12
-                    py-6 lg:py-5
-                    lg:min-h-[calc(100svh-76px)]
-                ">
+                        <div className="
+                            mx-auto grid max-w-[1536px]
+                            grid-cols-1 items-center gap-8
+                            lg:min-h-[590px]
+                            lg:grid-cols-[0.72fr_1.55fr]
+                            lg:gap-7
+                        ">
 
-                    {/* LEFT PANEL */}
-                    <div className="
-                        flex h-full flex-col justify-center
-                        rounded-2xl bg-[#E9EAFE]
-                        px-7 py-10 sm:px-12 lg:px-14
-                    ">
-
-                        <div className="mb-5">
-                            <span className="text-xl font-bold tracking-tight text-[#302344]">
-                                FamPilot
-                            </span>
-
-                            <p className="mt-1 text-xs text-[#77718A]">
-                                Together for a Brighter Tomorrow
-                            </p>
-                        </div>
+                    {/* LEFT CONTENT */}
+                    <div className="max-w-[440px]">
 
                         <span className="
-                            mb-5 w-fit rounded-full
-                            bg-white/80 px-4 py-2
-                            text-xs font-semibold
-                            text-[#6654A5]
+                            inline-flex items-center gap-2
+                            rounded-full bg-purple-50
+                            px-4 py-2
+                            text-xs font-bold tracking-wide
+                            text-[#7025C7]
                         ">
-                            YOUR FAMILY, OUR PRIORITY
+                            ✦ AI-POWERED FAMILY MANAGEMENT
                         </span>
 
                         <h1 className="
-                            text-4xl font-bold leading-tight
-                            tracking-tight text-[#292631]
-                            sm:text-5xl xl:text-6xl
+                            mt-7 text-4xl font-extrabold
+                            leading-[1.12] tracking-tight
+                            text-[#21132F]
+                            sm:text-5xl xl:text-[58px]
                         ">
-                            Everything your family needs.
-
-                            <span className="block text-[#6654A5]">
-                                All in one place.
+                            Your Family.
+                            <span className="block">Your Future.</span>
+                            <span className="block text-[#7025C7]">
+                                One Place.
                             </span>
                         </h1>
 
                         <p className="
-                            mt-6 max-w-lg
-                            text-sm leading-7
-                            text-[#716D7C] sm:text-base
+                            mt-5 max-w-[420px]
+                            text-[15px] leading-7
+                            text-[#625B6D]
                         ">
-                            Manage your family's finances, insurance,
-                            investments and everyday responsibilities
+                            Manage your family's finances, expenses,
+                            insurance, investments and household needs
                             through one secure and intelligent platform.
                         </p>
 
-                        <div className="mt-8 space-y-4">
+                        <div className="mt-7 flex flex-wrap gap-3">
 
-                            {[
-                                'Organize your family finances',
-                                'Manage insurance and investments',
-                                'Simplify everyday household responsibilities',
-                                'Get intelligent insights with AI assistance'
-                            ].map((item) => (
-                                <div key={item} className="flex items-center gap-3">
-                                    <span className="
-                                        flex h-6 w-6 shrink-0
-                                        items-center justify-center
-                                        rounded-full bg-white
-                                        text-xs font-bold text-[#6654A5]
-                                    ">
-                                        ✓
-                                    </span>
+                            <a
+                                href="/register"
+                                className="
+                                    rounded-xl bg-[#7025C7]
+                                    px-6 py-3
+                                    text-sm font-semibold text-white
+                                    shadow-md shadow-purple-200
+                                    transition hover:bg-[#5B19A8]
+                                "
+                            >
+                                Get Started Free →
+                            </a>
 
-                                    <span className="text-sm text-[#514D5B]">
-                                        {item}
-                                    </span>
-                                </div>
-                            ))}
+                            <a
+                                href="#how-it-works"
+                                className="
+                                    rounded-xl border border-[#7025C7]
+                                    px-5 py-3
+                                    text-sm font-semibold text-[#7025C7]
+                                    transition hover:bg-purple-50
+                                "
+                            >
+                                ▶ See How It Works
+                            </a>
 
                         </div>
-
-                        <p className="
-                            mt-10 border-t border-[#DAD8EB]
-                            pt-5 text-xs font-medium
-                            tracking-wide text-[#6654A5]
-                        ">
-                            Together for a Brighter Tomorrow.
-                        </p>
-
                     </div>
 
-                    {/* RIGHT PANEL: REGISTRATION */}
-                    <div className="
-                        flex w-full items-center justify-center
-                        lg:px-4
-                    ">
-                        <div className="w-full max-w-[470px]">
-                            <Register />
-                        </div>
+                    {/* RIGHT DASHBOARD */}
+                    <div className="w-full min-w-0">
+                        <FamPilotDashboard />
                     </div>
 
                 </div>
             </section>
 
-            {/* Section 2: Our Services */}
-            <ServicesSection />
+            {/* Services Section */}
+            
+            <ServicesSection></ServicesSection>
+            
+            {/* 3. How It Works */}
+            <HowItWorksSection />
+
+            {/* 4. AI Family Advisor */}
+            <AIAdvisorSection />
+
+            {/* 5. Security and Privacy */}
+            <SecuritySection />
+
+            {/* 6. Why FamPilot */}
+            <WhyFamPilotSection />
+
+            {/* 7. Final Call to Action */}
+            <FinalCTASection />
+
+            {/* 8. Footer */}
+            <Footer />
 
         </main>
     )
